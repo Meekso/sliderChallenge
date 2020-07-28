@@ -3,22 +3,37 @@ body {
 	font-size: 32px;
 }
 
-.slider-wrapper {
-	overflow: hidden;
-	width: 90%;
+button {
+	 outline: none;
 }
 
-.slider-wrapper * {
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+#slider {
+	position: relative;
+	overflow: hidden;
+	max-width: 1440px;
+	max-height: 800px;
+	box-shadow: 0 40px 50px -30px rgba(32.27,32.27,44,0.5);
+	border-radius: 5px;
+	margin: 0 auto;
+}
+
+#slider * {
   box-sizing: border-box;
 }
 
-.slider {
-	float: left;
-	max-width: 1440px;
-	max-height: 800px;
+.slide {
 	position: relative;
 	width: 100%;
-	border: solid 2px black;
 	padding-bottom: 56%;
 }
 
@@ -28,6 +43,7 @@ body {
 	height: 44.25%;
 	top: 25.25%;
 	left: 11.46%;
+	font-size: min(2vw, 32px);
 	z-index: 2;
 }
 
@@ -39,7 +55,6 @@ body {
 	height: auto;
 	border-radius: 5px;
 	box-shadow: 0 40px 50px -30px rgba(32.27,32.27,44,0.5);
-	box-shadow: ;
 }
 
 .comment {
@@ -58,40 +73,44 @@ body {
 	font-weight: 500;
 }
 
-.slider__button {
+.slider_nav {
 	position: absolute;
-  top:78.12%;
-  width: 7.78%;
-  height: 7%;
-  left:55.34%;
+  top: 78.13%;
+  width: 112px;
+  height: 56px;
+  left: 55.34%;
   background-color: #FFF;
-  transform: translateY(-50%);
   border-radius: 28px;
+  box-shadow: 0 15px 20px -10px rgba(32.27,32.27,44,0.1);
   cursor: pointer;
   z-index: 1001; /* Sit on top of everything */
 }
 
-.slider__button--prev {
-  left:50%;
+#slider_button-prev {
+	position: absolute;
+  left: 20%;
+  top: 10%;
 }
-.slider__button--next {
-  right:50%;
+
+#slider_button-next {
+	position: absolute;
+  left: 70%;
+  top: 10%;
 }
-.slider__button--prev::after,
-.slider__button--next::after {
-  content: " ";
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  top: 50%;
-  left: 54%;
-  border-right: 2px solid black;
-  border-bottom: 2px solid black;
-  transform: translate(-50%, -50%) rotate(135deg);
+
+#slider_button-prev:hover {
+	transform: scale(1.3);
+	opacity: 0.5;
 }
-.slider__button--next::after {
-  left: 47%;
-  transform: translate(-50%, -50%) rotate(-45deg);
+
+#slider_button-next:hover {
+	transform: scale(1.3);
+	opacity: 0.5;
+}
+
+.icon {
+	max-height: 16px
+	height: 20%;
 }
  
 #quotes {
@@ -116,4 +135,10 @@ body {
 	left: 46.52%;
 	width: 48.4%;
 	height: auto;
+}
+
+@media only screen and (max-width: 375px) {
+  body {
+    background-color: lightblue;
+  }
 }

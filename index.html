@@ -2,25 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="styles.css">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;500;700&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Coding Bootcamp Testimonials Slider</title>
-
 </head>
-<body>
 
-	<div class="slider-wrapper">
-		<div class="slider">
+<body>
+	<div id="slider">
 			<img id="quotes" src="images/pattern-quotes.svg">
 			<img id="curve" src="images/pattern-curve.svg">
 			<img id="pattern" src="images/pattern-bg.svg">
+
+		<div class="slide">
+
 		<div class="testimonial">
 			<p class="comment">
-			 “ I’ve been interested in coding for a while but never taken the jump, until now. I couldn’t recommend this course enough. I’m now in the job of my dreams and so excited about the future. ”
+				 “ I’ve been interested in coding for a while but never taken the jump, until now. I couldn’t recommend this course enough. I’m now in the job of my dreams and so excited about the future. ”
 			</p>
 			<div>
 				<p class="author">
@@ -31,16 +30,9 @@
 		<div>
 			<img class="head-shot" src="images/image-tanya.jpg">
 		</div>
-			<div class="slider__button">
-				<div class="slider__button--next"></div>
-				<div class="slider__button--prev"></div>
-			</div> 
 		</div>
-	
-		<div class="slider">
-			<img id="quotes" src="images/pattern-quotes.svg">
-			<img id="curve" src="images/pattern-curve.svg">
-			<img id="pattern" src="images/pattern-bg.svg">
+		
+		<div class="slide">
 		<div class="testimonial">
 			<p class="comment">
 			  “ If you want to lay the best foundation possible I’d recommend taking this course. The depth the instructors go into is incredible. I now feel so confident about starting up as a professional developer. ”
@@ -53,19 +45,30 @@
 		</div>
 			<div>
 				<img class="head-shot" src="images/image-john.jpg">
-			</div>				
+			</div>
 		</div>
 
-
-
+		<div class="slider_nav">
+				<div id="slider_button-prev">
+					<span class="icon" onclick="changeSlide(-1)">
+						<img src="images/icon-prev.svg">
+					</span>
+				</div>
+				<div id="slider_button-next">
+					<span class="icon" onclick="changeSlide(1)">
+						<img src="images/icon-next.svg">
+					</span>
+				</div>
+		</div>
 	</div>
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">UXMikko</a>.
+    Coded by <a href="http://mikkosillanpaa.com/" target="_blank">UXMikko</a>.
   </div>
 
-  <script type="text/javascript" src="app.js"></script>
-
 </body>
+
+<script type="text/javascript" src="app.js"></script>
+
 </html>
